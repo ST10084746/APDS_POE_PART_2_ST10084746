@@ -1,0 +1,36 @@
+POST https://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "username":"Godfreydh",
+    "password": "password2"
+}
+
+###
+POST https://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "username":"Godfreyd",
+    "password": "password2"
+}
+###
+POST https://localhost:3000/post HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvZGZyZXlkIiwidXNlcmlkIjoiNjUyNWJmZmNmNTA2NzA3YTkwMjk5YTBiIiwiaWF0IjoxNjk3MDI5NDk5LCJleHAiOjE2OTcwMzMwOTl9.JDr4F8y0PN4WXGU6fzo8GTwK19BZFE3C3tBw_ZB5Oao
+
+{
+    "title":"Third Post",
+    "content": "This is the 3rd post"
+}
+###
+
+GET https://localhost:3000/post HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvZGZyZXlkIiwidXNlcmlkIjoiNjUyNWJmZmNmNTA2NzA3YTkwMjk5YTBiIiwiaWF0IjoxNjk3MDI5NDk5LCJleHAiOjE2OTcwMzMwOTl9.JDr4F8y0PN4WXGU6fzo8GTwK19BZFE3C3tBw_ZB5Oao
+
+###
+DELETE https://localhost:3000/post/65267f1c50be5656e2c70780 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvZGZyZXlkIiwidXNlcmlkIjoiNjUyNWJmZmNmNTA2NzA3YTkwMjk5YTBiIiwiaWF0IjoxNjk3MDI5NDk5LCJleHAiOjE2OTcwMzMwOTl9.JDr4F8y0PN4WXGU6fzo8GTwK19BZFE3C3tBw_ZB5Oao
+###
+
+
